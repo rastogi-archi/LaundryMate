@@ -9,8 +9,8 @@ const ContactUs = () => {
   }
 
   return (
-    <section className="bg-white dark:bg-gray-900 py-16 px-6 md:px-12 lg:px-24">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <section className="bg-white dark:bg-gray-900 mt-10 sm:mt-15 px-6 md:px-12 lg:px-24">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-5 sm:gap-12 items-center">
         {/* Left: Heading and image */}
         <div className="text-center lg:text-left">
           <h2 className="text-4xl md:text-5xl font-bold text-[#032b56] dark:text-white mb-4">

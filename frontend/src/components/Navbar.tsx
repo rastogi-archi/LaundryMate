@@ -16,7 +16,7 @@ const Navbar = () => {
                 </Link>
 
                 {/* Desktop Menu */}
-                <div className="hidden md:flex items-center space-x-8 text-md font-medium">
+                <div className="hidden md:flex items-center space-x-8 text-lg font-medium">
                     <Link to="/" className="hover:text-blue-600 transition-colors duration-200">Home</Link>
                     <Link to="/about" className="hover:text-blue-600 transition-colors duration-200">About</Link>
                     <Link to="/contact" className="hover:text-blue-600 transition-colors duration-200">Contact us</Link>
@@ -33,7 +33,7 @@ const Navbar = () => {
                     </button>
 
                     <div className="hidden sm:block">
-                        <Link to={"/book-slot"}>
+                        <Link to={"/book-machine"}>
                             <Button className="flex items-center gap-2 bg-[#032b56] cursor-pointer">
                                 Book machine <ChevronRight className="h-4 w-4" />
                             </Button>
@@ -44,7 +44,7 @@ const Navbar = () => {
 
             {/* Mobile Menu */}
             {isOpen && (
-                <div className="md:hidden px-4 pb-4 text-base font-medium">
+                <div className="md:hidden px-4 pb-4 text-md font-medium">
                     <Link
                         to="/"
                         className="block py-2 hover:text-blue-600 transition-colors duration-200"
@@ -65,7 +65,7 @@ const Navbar = () => {
                     >
                         Contact us
                     </Link>
-                    <Link to={"/book-slot"}>
+                    <Link to={"/book-machine"}>
                         <Button className="flex justify-center items-center gap-2 mt-2 bg-[#032b56] cursor-pointer">
                             Book machine <ChevronRight className="h-4 w-4" />
                         </Button>

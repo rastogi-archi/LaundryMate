@@ -3,7 +3,7 @@ import AboutMain from "./AboutMain"
 const About = () => {
     return (
         <div>
-            <div className="text-center max-w-3xl mx-auto mb-12 mt-8">
+            <div className="text-center max-w-3xl mx-auto mb-12 mt-8 sm:mt-12">
                 <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">About Us</h2>
 
                 <div className="text-center max-w-4xl mx-auto">
