@@ -1,21 +1,20 @@
-import { motion } from "motion/react"
+import { motion } from "framer-motion";
 
 const cardVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: (i: number) => ({
-      opacity: 1,
-      y: 0,
-      transition: {
-        delay: i * 0.2,
-        duration: 0.8,
-        ease: "easeInOut",
-      },
-    }),
-  };
-  
+  hidden: { opacity: 0, y: 30, scale: 0.95 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      delay: i * 0.2,
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  }),
+};
 
 const WhyChoose = () => {
-
   const features = [
     {
       icon: "📅",
@@ -32,7 +31,8 @@ const WhyChoose = () => {
       title: "Fair Usage System",
       desc: "Automatic limits and reminders promote fair access for everyone—no more missed turns or monopolized machines.",
     },
-  ]
+  ];
+
   return (
     <section className="bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800 py-10 px-4 md:px-10">
       <div className="max-w-6xl mx-auto text-center mb-10">
@@ -54,10 +54,12 @@ const WhyChoose = () => {
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
             variants={cardVariants}
-            className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 text-center"
+            className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 p-8 rounded-2xl shadow-lg text-center transition-transform"
           >
             <div className="text-5xl mb-4">{feature.icon}</div>
-            <h4 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white">{feature.title}</h4>
+            <h4 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white">
+              {feature.title}
+            </h4>
             <p className="text-gray-600 dark:text-gray-300">{feature.desc}</p>
           </motion.div>
         ))}
